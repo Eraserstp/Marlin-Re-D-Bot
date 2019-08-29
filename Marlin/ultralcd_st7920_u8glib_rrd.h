@@ -41,37 +41,37 @@
 #pragma GCC optimize (3)
 
 // If you want you can define your own set of delays in Configuration.h
-//#define ST7920_DELAY_1 DELAY_NS(0)
-//#define ST7920_DELAY_2 DELAY_NS(0)
-//#define ST7920_DELAY_3 DELAY_NS(0)
+#define ST7920_DELAY_1 DELAY_NS(0)
+#define ST7920_DELAY_2 DELAY_NS(300)
+#define ST7920_DELAY_3 DELAY_NS(0)
 
-#if F_CPU >= 20000000
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(50)
-#elif MB(3DRAG) || MB(K8200) || MB(K8400) || MB(SILVER_GATE)
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(188)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
-#elif MB(MINIRAMBO)
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(250)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
-#elif MB(RAMBO)
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
-#elif MB(BQ_ZUM_MEGA_3D)
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(189)
-#elif F_CPU == 16000000
-  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
-  #define CPU_ST7920_DELAY_3 DELAY_NS(63)
-#else
-  #error "No valid condition for delays in 'ultralcd_st7920_u8glib_rrd.h'"
-#endif
+//#if F_CPU >= 20000000
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(50)
+//#elif MB(3DRAG) || MB(K8200) || MB(K8400) || MB(SILVER_GATE)
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(188)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
+//#elif MB(MINIRAMBO) || MB(EINSY_RAMBO)
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(400)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
+//#elif MB(RAMBO)
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(0)
+//#elif MB(BQ_ZUM_MEGA_3D)
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(189)
+//#elif F_CPU == 16000000
+//  #define CPU_ST7920_DELAY_1 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_2 DELAY_NS(0)
+//  #define CPU_ST7920_DELAY_3 DELAY_NS(63)
+//#else
+//  #error "No valid condition for delays in 'ultralcd_st7920_u8glib_rrd.h'"
+//#endif
 
 #ifndef ST7920_DELAY_1
   #define ST7920_DELAY_1 CPU_ST7920_DELAY_1

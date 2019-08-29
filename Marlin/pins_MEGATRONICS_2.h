@@ -45,6 +45,8 @@
 #ifndef Z_MIN_PROBE_PIN
   #define Z_MIN_PROBE_PIN  19
 #endif
+#define SERVO0_PIN 46
+
 
 //
 // Steppers
@@ -98,13 +100,14 @@
 // Heaters / Fans
 //
 #define HEATER_0_PIN        9
-#define HEATER_1_PIN        8
-#define HEATER_BED_PIN     10
+#define HEATER_1_PIN        10
+#define HEATER_BED_PIN     8
 
-#ifndef FAN_PIN
-  #define FAN_PIN           7
-#endif
-#define FAN1_PIN            6
+//#undef FAN_PIN
+//#ifndef FAN_PIN
+//  #define FAN_PIN           7
+//#endif
+#define FAN_PIN            6
 
 //
 // Misc. Functions
